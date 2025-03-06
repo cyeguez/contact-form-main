@@ -51,10 +51,9 @@ body {
   max-width: 400px;
   padding: 30px 25px;
   margin-top: 2rem;
-  
 }
 
-.container .sent{
+.container .sent {
   position: relative;
   margin-top: 10rem;
 }
@@ -71,7 +70,9 @@ body {
 
 label {
   margin-block: 0.875rem;
-  display: block;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid red;
 }
 input {
   height: 3.125rem;
@@ -93,14 +94,11 @@ input[type="email"] {
   border-radius: 8px;
   margin-bottom: 1rem;
   padding-left: 1.625rem;
-
- 
-
 }
 
 .wrapper input {
   accent-color: var(--Green-600);
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
@@ -115,12 +113,10 @@ textarea {
   border-radius: 8px;
   border: 1px solid var(--Green-600);
   margin-bottom: 2.8125rem;
-  
-  &:focus{
-    outline-color: var(--Green-600)
-  };
 
-
+  &:focus {
+    outline-color: var(--Green-600);
+  }
 }
 
 .group-consent {
@@ -129,14 +125,14 @@ textarea {
   gap: 1rem;
   margin-bottom: 2.8125rem;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
 
 .group-consent label {
   width: 70%;
-  &:hover{
+  &:hover {
     cursor: pointer;
     user-select: none;
   }
@@ -145,8 +141,6 @@ textarea {
   width: 18px;
   accent-color: var(--Green-600);
 }
-
-
 
 button[type="submit"] {
   width: 100%;
@@ -174,7 +168,6 @@ button[type="submit"] {
   position: absolute;
   top: 1rem;
   display: none;
-  
 }
 
 .success-group {
@@ -199,5 +192,15 @@ button[type="submit"] {
   color: hsl(228, 45%, 44%);
 }
 
-
 /* mediaqueries */
+
+@media (min-width: 800px) and (max-width: 1440px) {
+  .container {
+    width: 800px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+}
