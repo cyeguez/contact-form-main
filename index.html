@@ -37,28 +37,35 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Contact Us</h1>
+      <h1 class="title karla-700">Contact Us</h1>
       <form action="#" id="form1">
         <div class="form-group">
-          <label for="fname" req>First Name </label>
+          <label for="fname" req>First Name  <span class="symbol"> * </span> </label>
           <input type="text" id="fname" name="fname" required />
-          <label for="lname" req>Last Name </label>s
+          <label for="lname" req>Last Name <span class="symbol"> * </span> </label>
           <input type="text" id="lname" name="lname" required />
         </div>
-        <label for="mail">Email Address</label>
+        <label for="mail">Email Address <span class="symbol"> * </span></label>
         <input type="email" id="mail" name="mail" required />
-        <div class="form-group">
-          <label for="query">Query Type</label>
-          <select id="query" name="query" required>
-            <option value="general">General Enquiry</option>
-            <option value="support">Support Request</option>
-          </select>
-        </div>
-        <label for="msg">Message</label>
+        <section>
+          <label for="query">Query Type <span class="symbol"> * </span></label>
+          <div class="form-group">
+            <div class="wrapper">
+              <input type="radio" name="choice" value="general" id="choice1">
+              <label for="choice1">General Enquiry</label>
+            </div>
+            <div class="wrapper">
+              <input type="radio" name="choice" value="support" id="choice2">
+              <label for="choice2">Support Request</label>
+            </div>
+          </div>
+        </section>
+
+        <label for="msg">Message <span class="symbol"> * </span></label>
         <textarea id="msg" name="msg" required></textarea>
-        <div class="form-group">
+        <div class="group-consent">
           <input type="checkbox" id="consent" name="consent" required />
-          <label for="consent">I consent to being contacted</label>
+          <label for="consent">I consent to being contacted by the team <span class="symbol">*</span></label>
         </div>
         <button type="submit">Submit</button>
       </form>
