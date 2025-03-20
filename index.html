@@ -23,56 +23,66 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Contact form</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    
   </head>
   <body>
     <div class="container">
       <h1 class="title karla-700">Contact Us</h1>
       <form action="#" id="form1">
         <div class="form-group">
-          <label for="fname" req
-            >First Name <span class="symbol"> * </span>
-          </label>
-          <input type="text" id="fname" name="fname" required />
-          <label for="lname" req
-            >Last Name <span class="symbol"> * </span>
-          </label>
-          <input type="text" id="lname" name="lname" required />
+          <div class="form-group__item">
+            <label for="fname"
+              >First Name <span class="symbol"> * </span>
+            </label>
+            <input type="text" id="fname" name="fname" class="input-user" />
+            <em class="error-message" id="fname-error"></em>
+          </div>
+          <div class="form-group__item">
+            <label for="lname"
+              >Last Name <span class="symbol"> * </span>
+            </label>
+            <input type="text" id="lname" name="lname" class="input-user" />
+            <em class="error-message" id="lname-error"></em>
+          </div>
         </div>
-        <label for="mail">Email Address <span class="symbol"> * </span></label>
-        <input type="email" id="mail" name="mail" required />
+        <label for="email">Email Address <span class="symbol"> * </span></label>
+        <input type="email" id="email" name="email" />
+        <em class="error-message" id="email-error"
+          >Please enter a valid email address</em
+        >
+
         <section>
-          <label for="query">Query Type <span class="symbol"> * </span></label>
+          <label>Query Type <span class="symbol"> * </span> </label>
           <div class="form-group">
             <div class="wrapper">
               <input type="radio" name="choice" value="general" id="choice1" />
               <label for="choice1">General Enquiry</label>
             </div>
-            <div class="wrapper">
+            <div class="wrapper checked">
               <input type="radio" name="choice" value="support" id="choice2" />
               <label for="choice2">Support Request</label>
             </div>
           </div>
+          <em class="error-message" id="error-radio"></em>
         </section>
 
         <label for="msg">Message <span class="symbol"> * </span></label>
-        <textarea id="msg" name="msg" required></textarea>
+        <textarea id="msg" name="msg"></textarea>
+        <em class="error-message" id="msg-error"></em>
         <div class="group-consent">
-          <input type="checkbox" id="consent" name="consent" required />
+          <input type="checkbox" id="consent" name="consent" />
           <label for="consent"
             >I consent to being contacted by the team
             <span class="symbol">*</span></label
           >
         </div>
+        <em class="error-message" id="error-consent"></em>
         <button type="submit">Submit</button>
       </form>
     </div>
 
     <!-- Pop up -->
 
-    <div class="success">
+    <div class="success" id="success">
       <div class="success-group">
         <img
           src="./assets/images/icon-success-check.svg"
@@ -89,5 +99,7 @@
         >. Coded by <a href="#">César Yeguez</a>.
       </div>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
