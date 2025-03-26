@@ -60,6 +60,11 @@ form.addEventListener("submit", function (e) {
   if (isFormValid) {
     console.log("formulario enviado");
     modal.classList.add("active");
+    modal.scrollIntoView({behavior: "smooth"});
+    setTimeout(() => {
+      modal.classList.remove("active");
+    }, 5000);
+    form.reset();
   }
 });
 
@@ -93,6 +98,7 @@ function showError(field, errorElementId, errorMessage) {
 function hiddenError(field, errorElementId) {
   field.classList.remove("error");
   errorElementId.style.display = "none";
+  document.querySelector(".container").classList.add("send");
 }
 
 function paintRadio() {

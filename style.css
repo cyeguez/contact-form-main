@@ -51,11 +51,11 @@ body {
   max-width: 400px;
   padding: 30px 25px;
   margin-top: 2rem;
+  position: relative;
 }
 
-.container .sent {
-  position: relative;
-  margin-top: 10rem;
+.container.send {
+  margin-top: 8.8rem;
 }
 
 .title {
@@ -89,7 +89,6 @@ input {
 
 .input-user .error {
   border: 1px solid var(--Red);
-  
 }
 
 input[type="email"] {
@@ -105,20 +104,17 @@ input[type="email"] {
   padding-left: 1.625rem;
 }
 
-.wrapper.checked{
+.wrapper.checked {
   background-color: var(--Green-200);
 }
 
-
-
 .wrapper input {
   accent-color: var(--Green-600);
- 
+
   &:hover {
     cursor: pointer;
   }
 }
-
 
 .symbol {
   color: var(--Green-600);
@@ -129,7 +125,7 @@ textarea {
   height: 15rem;
   border-radius: 8px;
   border: 1px solid var(--Green-600);
-  
+
   padding: 1rem;
 
   &:focus {
@@ -142,7 +138,6 @@ textarea {
   align-items: center;
   gap: 1rem;
   margin-top: 2.8125rem;
-  
 
   &:hover {
     cursor: pointer;
@@ -179,14 +174,15 @@ button[type="submit"] {
 /* Pop up */
 
 .success {
-  background-color: var(--Green-600);
+  background-color: var(--Grey-900);
   color: var(--White);
   border-radius: 8px;
-  width: calc(100% - 2rem);
+  width: 100%;
   padding: 1.625rem;
-  max-width: 400px;
   position: absolute;
-  top: 1rem;
+  top: -125px;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
 }
 
@@ -227,9 +223,6 @@ button[type="submit"] {
   color: var(--Red);
 }
 
-
-
-
 /* mediaqueries */
 
 @media screen and (min-width: 768px) {
@@ -254,5 +247,12 @@ button[type="submit"] {
 
   textarea {
     height: 6.5rem;
+  }
+
+  .success {
+    
+    max-width: 500px;
+    top: -105px;
+   
   }
 }
